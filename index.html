@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MUXTI Support</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --purple: #7C3AED;
+      --purple-light: rgba(124,58,237,0.10);
+      --bg: #ffffff;
+      --surface: #f8f8f7;
+      --border: rgba(0,0,0,0.10);
+      --text: #1a1a1a;
+      --text2: #555550;
+      --text3: #888883;
+      --radius: 12px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #141413;
+        --surface: #1e1e1c;
+        --border: rgba(255,255,255,0.10);
+        --text: #f0efed;
+        --text2: #a8a8a3;
+        --text3: #666662;
+      }
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 48px 24px 80px;
+    }
+
+    .wrap {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding-bottom: 32px;
+      border-bottom: 0.5px solid var(--border);
+      margin-bottom: 40px;
+    }
+
+    .logo {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: var(--purple);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      flex-shrink: 0;
+    }
+
+    header h1 {
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 3px;
+    }
+
+    header p {
+      font-size: 14px;
+      color: var(--text2);
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--text3);
+      margin-bottom: 14px;
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 48px;
+    }
+
+    details {
+      background: var(--surface);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 18px;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text);
+      cursor: pointer;
+      list-style: none;
+      gap: 12px;
+      user-select: none;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    summary::after {
+      content: '';
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+      background-color: var(--text3);
+      mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 9l6 6 6-6' stroke='currentColor' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: contain;
+      transition: transform 0.2s;
+    }
+
+    details[open] summary::after {
+      transform: rotate(180deg);
+    }
+
+    details[open] summary {
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .faq-answer {
+      padding: 14px 18px 16px;
+      font-size: 14px;
+      line-height: 1.75;
+      color: var(--text2);
+    }
+
+    .faq-answer strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .contact-card {
+      background: var(--surface);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+
+    .contact-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .contact-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: var(--purple-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-icon svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--purple);
+    }
+
+    .contact-label {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+
+    .contact-sub {
+      font-size: 13px;
+      color: var(--text2);
+    }
+
+    .email-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 9px 18px;
+      border-radius: 100px;
+      border: 0.5px solid var(--border);
+      background: var(--bg);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.15s;
+    }
+
+    .email-btn:hover {
+      background: var(--surface);
+    }
+
+    .email-btn svg {
+      width: 15px;
+      height: 15px;
+      stroke: var(--text2);
+    }
+
+    footer {
+      display: flex;
+      gap: 24px;
+      padding-top: 28px;
+      border-top: 0.5px solid var(--border);
+      flex-wrap: wrap;
+    }
+
+    footer a {
+      font-size: 13px;
+      color: var(--text2);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    footer a:hover { color: var(--text); }
+
+    footer svg {
+      width: 14px;
+      height: 14px;
+      stroke: currentColor;
+    }
+
+    .footer-copy {
+      margin-left: auto;
+      font-size: 13px;
+      color: var(--text3);
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="logo">M</div>
+    <div>
+      <h1>MUXTI Support</h1>
+      <p>Cyprus's peer-to-peer marketplace &middot; Help &amp; FAQs</p>
+    </div>
+  </header>
+
+  <p class="section-label">Frequently asked questions</p>
+
+  <div class="faq-list">
+
+    <details>
+      <summary>How do I create a listing?</summary>
+      <div class="faq-answer">Tap the <strong>+</strong> button at the bottom of the screen. Add photos, write a title and description, set your price and category, then tap <strong>Publish</strong>. Your listing goes live immediately after passing a quick content review.</div>
+    </details>
+
+    <details>
+      <summary>How do I contact a seller?</summary>
+      <div class="faq-answer">Open any listing and use the contact buttons on the seller card — WhatsApp, Telegram, SMS, or phone call. You can also send an in-app message directly through MUXTI without sharing your personal number.</div>
+    </details>
+
+    <details>
+      <summary>What is Boost and how does Featured placement work?</summary>
+      <div class="faq-answer">Boosting moves your listing higher in search results for a set number of days. Each boost earns Featured Points — once you accumulate 6 points across at least 2 boosts, your listing earns a spot in the Featured carousel at the top of the home feed for 7 days, at no extra charge. Plans start at €2.99.</div>
+    </details>
+
+    <details>
+      <summary>How do I earn a Verified badge?</summary>
+      <div class="faq-answer">Verification is earned automatically when you meet all five criteria: confirmed email, confirmed phone number, account older than 30 days, at least 5 lifetime listings published, and at least 1 completed sale. You can track your progress from your Profile screen.</div>
+    </details>
+
+    <details>
+      <summary>How do I report a suspicious listing?</summary>
+      <div class="faq-answer">Open the listing and scroll to the bottom of the seller card — tap <strong>Report this listing</strong>, choose a reason, and optionally add a note. Listings reported by 3 or more users are automatically removed from the feed and reviewed by our team.</div>
+    </details>
+
+    <details>
+      <summary>How do I block another user?</summary>
+      <div class="faq-answer">Open a message thread with the user and tap the <strong>&hellip;</strong> menu in the top-right corner. Select <strong>Block user</strong>. Blocked users cannot contact you and their listings will not appear in your feed.</div>
+    </details>
+
+    <details>
+      <summary>How do I delete my account and data?</summary>
+      <div class="faq-answer">Go to <strong>Profile &rarr; Settings &rarr; Account &rarr; Delete Account</strong>. This permanently removes your profile, all listings, messages, and associated data in accordance with GDPR. This action cannot be undone. You can also email us and we will process the deletion within 72 hours.</div>
+    </details>
+
+    <details>
+      <summary>My listing was rejected — what do I do?</summary>
+      <div class="faq-answer">Rejected listings display a reason on your Profile screen. Edit the listing to address the issue and resubmit — it will go through review again automatically. If you believe the rejection was an error, contact us at the address below with your listing details and we'll review it manually.</div>
+    </details>
+
+    <details>
+      <summary>Is MUXTI available on Android?</summary>
+      <div class="faq-answer">MUXTI is currently available on iOS (iPhone and iPad). An Android version is in development. Check back soon for updates.</div>
+    </details>
+
+    <details>
+      <summary>How do wallet top-ups work?</summary>
+      <div class="faq-answer">You can top up your MUXTI Wallet from the Payment screen using a credit or debit card. Wallet funds are used to pay for Boost plans. Funds never expire and are non-refundable once used on a boost.</div>
+    </details>
+
+  </div>
+
+  <p class="section-label">Contact us</p>
+
+  <div class="contact-card">
+    <div class="contact-left">
+      <div class="contact-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <path d="m2 7 10 7 10-7"/>
+        </svg>
+      </div>
+      <div>
+        <div class="contact-label">Email support</div>
+        <div class="contact-sub">We respond within 1&ndash;2 business days</div>
+      </div>
+    </div>
+    <a href="mailto:boogieapps.help@gmail.com" class="email-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 2 11 13"/>
+        <path d="m22 2-7 20-4-9-9-4 20-7z"/>
+      </svg>
+      boogieapps.help@gmail.com
+    </a>
+  </div>
+
+  <footer>
+    <a href="https://wixufenxovnqvooznhwy.supabase.co/functions/v1/privacy" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+      Privacy policy
+    </a>
+    <a href="https://wixufenxovnqvooznhwy.supabase.co/functions/v1/terms" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/>
+      </svg>
+      Terms &amp; conditions
+    </a>
+    <span class="footer-copy">&copy; 2026 BoogieApps</span>
+  </footer>
+
+</div>
+</body>
+</html>
