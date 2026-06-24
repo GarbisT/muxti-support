@@ -1,90 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Privacy Policy — MUXTI</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet"/>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: #0D1129; color: #fff; min-height: 100vh; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 80px 24px 100px; }
-    .back { display: inline-flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.5); text-decoration: none; font-size: 14px; font-weight: 500; margin-bottom: 48px; transition: color 0.2s; }
-    .back:hover { color: #fff; }
-    .logo { font-size: 18px; font-weight: 900; background: linear-gradient(135deg,#A78BFA,#60A5FA); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 8px; }
-    h1 { font-size: 36px; font-weight: 900; letter-spacing: -1px; margin-bottom: 8px; }
-    .updated { font-size: 13px; color: rgba(255,255,255,0.4); margin-bottom: 48px; }
-    h2 { font-size: 18px; font-weight: 700; margin: 36px 0 12px; color: #A78BFA; }
-    p, li { font-size: 15px; line-height: 1.75; color: rgba(255,255,255,0.7); margin-bottom: 12px; }
-    ul { padding-left: 20px; }
-    a { color: #60A5FA; }
-    hr { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 40px 0; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MUXTI — Privacy Policy</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,sans-serif;font-size:15px;line-height:1.75;color:#1a1a2e;background:#fff;padding:20px 20px 40px;max-width:820px;margin:0 auto}
+.header{text-align:center;padding:28px 0 22px;border-bottom:2px solid #7c3aed;margin-bottom:28px}
+.logo{font-size:28px;font-weight:800;color:#7c3aed;letter-spacing:-1px;margin-bottom:6px}
+.doc-title{font-size:18px;font-weight:700;color:#1a1a2e;margin-bottom:4px}
+.meta{font-size:13px;color:#6b7280}
+.summary-box{background:#f5f3ff;border:1px solid #c4b5fd;border-radius:10px;padding:16px 18px;margin-bottom:20px}
+.summary-box .label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:#7c3aed;margin-bottom:6px}
+.summary-box p{font-size:14px;color:#4c1d95;margin:0}
+.index{background:#faf7ff;border:1px solid #ddd6fe;border-radius:10px;padding:16px 18px;margin-bottom:28px}
+.index-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:#7c3aed;margin-bottom:12px}
+.index-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px 20px}
+.index a{font-size:13px;color:#5b21b6;text-decoration:none;padding:4px 0;display:block;border-bottom:1px solid #ede9fe}
+.index a:last-child{border-bottom:none}
+.index-grid a:hover{color:#7c3aed}
+h2{font-size:17px;font-weight:700;color:#4c1d95;margin:28px 0 10px;padding-bottom:6px;border-bottom:1px solid #ede9fe}
+h3{font-size:15px;font-weight:700;color:#5b21b6;margin:20px 0 8px}
+p{margin-bottom:12px}
+ul{margin:10px 0 12px 22px}
+ul li{margin-bottom:6px}
+.highlight{background:#f5f3ff;border-left:3px solid #7c3aed;padding:12px 16px;border-radius:0 8px 8px 0;margin:14px 0;font-size:14px}
+.highlight strong{color:#4c1d95}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+thead th{background:#7c3aed;color:#fff;padding:9px 12px;text-align:left;font-weight:600}
+tbody td{padding:9px 12px;border-bottom:1px solid #e5e7eb;vertical-align:top}
+tbody tr:nth-child(even) td{background:#f9fafb}
+.contact-box{background:#f5f3ff;border:1px solid #c4b5fd;border-radius:10px;padding:16px 18px;margin-top:16px;font-size:14px}
+.contact-box strong{color:#4c1d95}
+.back-top{font-size:12px;color:#7c3aed;text-decoration:none;display:inline-block;margin-top:20px}
+footer{margin-top:40px;padding-top:20px;border-top:1px solid #e5e7eb;text-align:center;font-size:13px;color:#9ca3af}
+</style>
 </head>
 <body>
-<div class="wrap">
-  <a href="https://muxti.cy" class="back">← Back to MUXTI</a>
+
+<div class="header">
   <div class="logo">MUXTI</div>
-  <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: June 2026</p>
-
-  <p>MUXTI ("we", "us", or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our iOS application.</p>
-
-  <h2>1. Information We Collect</h2>
-  <ul>
-    <li><strong>Account information:</strong> Email address, display name, profile photo (optional)</li>
-    <li><strong>Listing content:</strong> Photos, descriptions, prices, and location (city) you provide when posting listings</li>
-    <li><strong>Location:</strong> City-level location for listing context; precise GPS may be used during signup (not stored continuously)</li>
-    <li><strong>Messages:</strong> In-app chat messages between users</li>
-    <li><strong>Usage data:</strong> How you interact with the App (page views, searches, clicks) for improving the experience</li>
-    <li><strong>Device data:</strong> Device type and OS version for crash diagnostics</li>
-  </ul>
-
-  <h2>2. How We Use Your Information</h2>
-  <ul>
-    <li>To provide and operate the MUXTI marketplace</li>
-    <li>To process payments via Stripe (we do not store card details)</li>
-    <li>To send transactional emails (OTP codes, listing notifications)</li>
-    <li>To improve app performance and fix bugs</li>
-    <li>To enforce our Terms of Service and prevent fraud</li>
-  </ul>
-
-  <h2>3. Data Sharing</h2>
-  <p>We do not sell your personal information. We share data only with:</p>
-  <ul>
-    <li><strong>Supabase</strong> — our backend infrastructure provider (data hosted in the EU)</li>
-    <li><strong>Stripe</strong> — payment processing (card data handled exclusively by Stripe)</li>
-    <li><strong>Resend</strong> — transactional email delivery</li>
-    <li>Law enforcement, when required by applicable law</li>
-  </ul>
-
-  <h2>4. Data Retention</h2>
-  <p>We retain your account data for as long as your account is active. Deleted accounts and associated data are purged within 30 days. Listing data may be retained in anonymised form for analytics.</p>
-
-  <h2>5. Your Rights</h2>
-  <p>Under applicable law (including GDPR where applicable), you have the right to:</p>
-  <ul>
-    <li>Access the personal data we hold about you</li>
-    <li>Request correction or deletion of your data</li>
-    <li>Object to certain processing activities</li>
-    <li>Withdraw consent at any time</li>
-  </ul>
-  <p>To exercise these rights, contact us at <a href="https://garbist.github.io/muxti-support">support</a>.</p>
-
-  <h2>6. Security</h2>
-  <p>We use industry-standard measures to protect your data, including encrypted connections (HTTPS/TLS), row-level security on our database, and secure authentication. No system is 100% secure, and we cannot guarantee absolute security.</p>
-
-  <h2>7. Children</h2>
-  <p>MUXTI is not intended for users under 18 years of age. We do not knowingly collect data from minors.</p>
-
-  <h2>8. Changes to This Policy</h2>
-  <p>We may update this Privacy Policy from time to time. We will notify you of material changes via in-app notification or email.</p>
-
-  <h2>9. Contact</h2>
-  <p>For privacy-related questions or data requests, contact us at <a href="https://garbist.github.io/muxti-support">support</a> or boogieapps.help@gmail.com.</p>
-
-  <hr/>
-  <p style="font-size:13px;color:rgba(255,255,255,0.3)">© 2026 MUXTI. Cyprus.</p>
+  <div class="doc-title">Privacy Policy</div>
+  <div class="meta">Effective Date: 24 June 2026 &nbsp;&middot;&nbsp; BoogieApps &nbsp;&middot;&nbsp; Cyprus (EU)</div>
 </div>
+
+<div class="summary-box">
+  <div class="label">Plain Language Summary</div>
+  <p>MUXTI is a classifieds marketplace for Cyprus. We collect the minimum data needed to run the service. We do not sell your data. We do not store your GPS location. Payments are handled by Stripe &mdash; we never see your card number. In-app messages between users are stored on our servers; typing indicators are ephemeral and never stored. Draft listings are stored server-side and are only visible to you. You can delete your account and all associated data at any time from the app.</p>
+</div>
+
+<nav class="index">
+  <div class="index-title">&#128204; Jump to section</div>
+  <div class="index-grid">
+    <a href="#s1">1. Who We Are</a>
+    <a href="#s2">2. Data We Collect</a>
+    <a href="#s3">3. Legal Basis (GDPR Art. 6)</a>
+    <a href="#s4">4. How We Use Your Data</a>
+    <a href="#s5">5. Third-Party Processors</a>
+    <a href="#s6">6. Data Retention</a>
+    <a href="#s7">7. Your Rights Under GDPR</a>
+    <a href="#s8">8. Data Security</a>
+    <a href="#s9">9. Children's Privacy</a>
+    <a href="#s10">10. Local Storage</a>
+    <a href="#s11">11. Changes to This Policy</a>
+    <a href="#s12">12. Contact Us</a>
+  </div>
+</nav>
+
+<h2 id="s1">1. Who We Are</h2>
+<p><strong>Controller:</strong> BoogieApps, Cyprus (EU)<br>
+<strong>App:</strong> MUXTI &mdash; a peer-to-peer classifieds marketplace for Cyprus<br>
+<strong>Contact:</strong> <a href="mailto:boogieapps.help@gmail.com">boogieapps.help@gmail.com</a><br>
+<strong>GDPR representative:</strong> Same contact &mdash; BoogieApps, Cyprus</p>
+<p>This policy applies to the MUXTI mobile application and any related services. It describes what personal data we collect, why we collect it, how we protect it, and your rights under the EU General Data Protection Regulation (GDPR &mdash; Regulation 2016/679).</p>
+<a href="#top" class="back-top">&uarr; Back to top</a>
+
+<h2 id="s2">2. Data We Collect</h2>
+<h3>2.1 Account Data</h3>
+<p>When you create a MUXTI account we collect:</p>
+<ul>
+  <li><strong>Email address</strong> &mdash; used for passwordless OTP authentication and service communications.</li>
+  <li><strong>Display name</strong> &mdash; shown publicly on your profile and listings.</li>
+  <li><strong>Phone number</strong> &mdash; optional; shown to buyers only if you enable &ldquo;Allow Call&rdquo; on a listing.</li>
+  <li><strong>Profile photo</strong> &mdash; optional; stored in Supabase Storage (eu-north-1, Stockholm).</li>
+  <li><strong>Expo push token</strong> &mdash; stored to deliver in-app notifications. Removed when you sign out.</li>
+</ul>
+
+<h3>2.2 Listing Data</h3>
+<p>When you create or save a listing we collect:</p>
+<ul>
+  <li>Title, description, price, category, condition, and listing type (For Sale / Trade / Hire / Free).</li>
+  <li>City name + city-centre coordinates &mdash; when you pick a city from the picker, we store the standard centroid latitude and longitude for that city. This is city-level data derived from your explicit selection, not your device&rsquo;s GPS position.</li>
+  <li>Up to 10 listing photos, stored in Supabase Storage.</li>
+  <li>Contact channel preferences (WhatsApp number, Telegram number, allow-call flag).</li>
+  <li>Listing status, view count, and likes count.</li>
+  <li><strong>Draft status</strong> &mdash; if you save a listing as a draft before publishing, the draft content (title, description, images, and all other fields you have filled in) is stored on our servers. Draft Listings are visible only to you under &ldquo;My Listings&rdquo; and are not published to the public feed until you choose to publish them.</li>
+  <li><strong>Bump record</strong> &mdash; if you use the one-time Bump option to extend a listing&rsquo;s active period, we record that the bump has been used (a counter and timestamp). This is used solely to enforce the one-bump-per-listing limit.</li>
+</ul>
+
+<h3>2.3 Location Data</h3>
+<div class="highlight">
+  <strong>Important: what we store vs. what we read</strong><br><br>
+  <strong>Stored (on listings):</strong> City-centre latitude and longitude derived from the city you chose in the picker. Example: selecting &ldquo;Limassol&rdquo; stores lat 34.6851, lng 33.0326 &mdash; the city centre, not your home.<br><br>
+  <strong>Read but never stored (for proximity search):</strong> If you tap &ldquo;Use my location&rdquo; in the Search filters, your device&rsquo;s GPS coordinates are read once, passed as a query parameter to our database RPC, and immediately discarded. They are never written to any database table or log.
+</div>
+
+<h3>2.4 Content Moderation Data</h3>
+<p>When you publish or edit a listing, the title and description are analysed for prohibited content. Records of moderation decisions (not the full listing text) are retained in a moderation audit log to comply with the EU Digital Services Act (DSA). Draft Listings are not submitted for moderation until you choose to publish them.</p>
+
+<h3>2.5 Payment Data</h3>
+<p>Payments for Boost plans are processed by Stripe. MUXTI never receives, stores, or has access to your card number, CVV, or bank account details. Stripe is the data controller for payment information. See Stripe&rsquo;s privacy policy at <a href="https://stripe.com/privacy">stripe.com/privacy</a>.</p>
+
+<h3>2.6 Usage Data</h3>
+<p>We collect minimal usage data: listing view counts, likes, and session tokens required for authentication. We do not use third-party analytics SDKs (no Firebase Analytics, no Mixpanel, no Meta Pixel).</p>
+
+<h3>2.7 Messaging Data</h3>
+<p>When you use MUXTI&rsquo;s in-app messaging feature to communicate with other users about listings, we collect and store:</p>
+<ul>
+  <li><strong>Message content</strong> &mdash; the text of messages exchanged in a conversation thread, stored on our servers in Supabase (eu-north-1, Stockholm).</li>
+  <li><strong>Message metadata</strong> &mdash; sender ID, recipient ID, thread ID, and sent timestamp for each message.</li>
+  <li><strong>Read receipt timestamps (<code>read_at</code>)</strong> &mdash; when you open a conversation, a timestamp is recorded on the messages you have read. This enables the sender to see that their message has been read. You may opt out of read receipts at any time in Settings &rarr; Privacy &amp; Security. When either party in a conversation has opted out, no <code>read_at</code> timestamps are recorded or displayed for that conversation.</li>
+  <li><strong>Read receipts preference</strong> &mdash; your opt-in or opt-out choice for read receipts is stored server-side, linked to your account.</li>
+</ul>
+
+<h3>2.8 Real-Time Status Data (Typing Indicators)</h3>
+<div class="highlight">
+  <strong>Ephemeral &mdash; never stored</strong><br><br>
+  When you are actively composing a message, a real-time typing signal is broadcast to the other participant in the conversation using Supabase Realtime. This signal contains only a sender identifier and a boolean typing flag. It is <strong>never written to any database</strong>, is automatically discarded when you stop typing, and is not retained or accessible to us or any third party after transmission.
+</div>
+<a href="#top" class="back-top">&uarr; Back to top</a>
+
+<h2 id="s3">3. Legal Basis for Processing (GDPR Article 6)</h2>
+<table>
+  <thead>
+    <tr><th>Legal Basis</th><th>Processing Activities Covered</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Contract performance</strong><br>(Art. 6(1)(b))</td>
+      <td>Account creation and authentication; saving, publishing, and displaying listings (including Draft Listings); facilitating in-app messaging between buyers and sellers; delivering push notifications about your listings; processing Boost payments.</td>
+    </tr>
+    <tr>
+      <td><strong>Legitimate interests</strong><br>(Art. 6(1)(f))</td>
+      <td>Content moderation and fraud prevention; maintaining a moderation audit log for DSA compliance; aggregated view/like counts to rank listings; enforcing the one-bump-per-listing limit.</td>
+    </tr>
+    <tr>
+      <td><strong>Consent</strong><br>(Art. 6(1)(a))</td>
+      <td>Accessing device GPS for &ldquo;Near me&rdquo; proximity search (requested via the OS permission dialog, read once, never stored). You may withdraw consent at any time in device Settings &rarr; Privacy &rarr; Location Services.</td>
+    </tr>
+    <tr>
+      <td><strong>Legal obligation</strong><br>(Art. 6(1)(c))</td>
+      <td>Retaining transaction records as required by applicable tax and financial regulations.</td>
+    </tr>
+  </tbody>
+</table>
+<a href="#top" class="back-top">&uarr; Back to top</a>
+
+<h2 id="s4">4. How We Use Your Data</h2>
+<ul>
+  <li>Authenticate your account via one-time email codes.</li>
+  <li>Save and store Draft Listings on your behalf until you choose to publish or delete them.</li>
+  <li>Display your published listings to other users and power search and proximity filtering.</li>
+  <li>Deliver push notifications about activity on your listings.</li>
+  <li>Facilitate peer-to-peer in-app messaging between buyers and sellers, including delivering messages and, where both parties have opted in, displaying read receipt confirmations.</li>
+  <li>Process Boost payments through Stripe.</li>
+  <li>Automatically review listing content for prohibited material (hate speech, weapons, scams, etc.) as required by EU DSA Article 16 &mdash; applied at the point of publication, not while a listing is in Draft status.</li>
+  <li>Enforce the one-time Bump limit per listing.</li>
+  <li>Prevent fraud and abuse, including listing-velocity anomaly detection.</li>
+  <li>Respond to your support requests.</li>
+</ul>
+<p>We do not use your data for automated decision-making or profiling that produces legal effects (GDPR Article 22).</p>
+<a href="#top" class="back-top">&uarr; Back to top</a>
+
+<h2 id="s5">5. Third-Party Processors</h2>
+<p>We engage the following sub-processors. All are bound by GDPR-compliant Data Processing Agreements.</p>
+<table>
+  <thead>
+    <tr><th>Processor</th><th>Purpose</th><th>Location / Standard</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Supabase</strong></td>
+      <td>Database, authentication, file storage (profile photos, listing images, draft listing data), real-time messaging infrastructure</td>
+      <td>EU North-1 (Stockholm, Sweden) &mdash; within EU/EEA</td>
+    </tr>
+    <tr>
+      <td><strong>Stripe</strong></td>
+      <td>Payment processing for Boost plans</td>
+      <td>EU / USA &mdash; Standard Contractual Clauses (SCCs)</td>
+    </tr>
+    <tr>
+      <td><strong>OpenAI</strong></td>
+      <td>Automated listing content moderation (text analysis only; applied at publication, not to drafts)</td>
+      <td>USA &mdash; Standard Contractual Clauses (SCCs)</td>
+    </tr>
+    <tr>
+      <td><strong>Expo (Expo Inc.)</strong></td>
+      <td>Push notification delivery service</td>
+      <td>USA &mdash; Standard Contractual Clauses (SCCs)</td>
+    </tr>
+  </tbody>
+</table>
+<p>We do not sell, rent, or trade your personal data to any third party for marketing purposes.</p>
+<a href="#top" class="back-top">&uarr; Back to top</a>
+
+<h2 id="s6">6. Data Retention</h2>
+<table>
+  <thead>
+    <tr><th>Data Type</th><th>Retention Period</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Account profile (name, email, phone, avatar)</td><td>Until you delete your account.</td></tr>
+    <tr><td>Active listings</td><td>Until you delete the listing or it expires (30 days from publication or reactivation, or 30 days after the end of any active Boost period).</td></tr>
+    <tr><td>Draft listings</td><td>Until you publish the draft, delete it manually, or your account is deleted &mdash; whichever occurs first. Drafts do not expire automatically.</td></tr>
+    <tr><td>Bump record (bump_count, bumped_at)</td><td>Same as the associated listing. Retained to enforce the one-bump-per-listing limit.</td></tr>
+    <tr><td>Listing images</td><td>Deleted within 30 days after the associated listing is removed.</td></tr>
+    <tr><td>Push token</td><td>Removed immediately on sign-out.</td></tr>
+    <tr><td>Moderation audit log</td><td>Retained for 6 months (DSA Article 17 compliance). Anonymised thereafter.</td></tr>
+    <tr><td>Payment records</td><td>As required by applicable tax law (typically 7 years), held by Stripe.</td></tr>
+    <tr><td>GPS coordinates from &ldquo;Near me&rdquo;</td><td>Never stored &mdash; used in-memory for the single query, then discarded.</td></tr>
+    <tr><td>Message content and metadata</td><td>Retained until both parties delete the conversation thread, or until either party&rsquo;s account is deleted, whichever occurs first.</td></tr>
+    <tr><td>Read receipt timestamps (<code>read_at</code>)</td><td>Same as message retention. Not recorded when either party has opted out of read receipts.</td></tr>
+    <tr><td>Read receipts preference (opt-out setting)</td><td>Until you change the setting or delete your account.</td></tr>
+    <tr><td>Typing indicator signals</td><td>Not stored &mdash; ephemeral broadcast only, discarded immediately after transmission.</td></tr>
+  </tbody>
+</table>
+<a href="#top" class="back-top">&uarr; Back to top</a>
+
+<h2 id="s7">7. Your Rights Under GDPR</h2>
+<p>As a resident of the EU/EEA you have the following rights. To exercise any of them, contact us at <a href="mailto:boogieapps.help@gmail.com">boogieapps.help@gmail.com</a>. We will respond within 30 days.</p>
+<table>
+  <thead>
+    <tr><th>Right</th><th>What it means</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Access (Art. 15)</strong></td><td>Request a copy of the personal data we hold about you.</td></tr>
+    <tr><td><strong>Rectification (Art. 16)</strong></td><td>Ask us to correct inaccurate or incomplete data. Most profile data can be edited directly in the app.</td></tr>
+    <tr><td><strong>Erasure (Art. 17)</strong></td><td>Request deletion of your data. In-app: Profile &rarr; Privacy &amp; Security &rarr; Delete Account removes all data immediately, including any Draft Listings. You can also email us.</td></tr>
+    <tr><td><strong>Restriction (Art. 18)</strong></td><td>Ask us to pause processing your data while a dispute is resolved.</td></tr>
+    <tr><td><strong>Portability (Art. 20)</strong></td><td>Receive your data in a structured, machine-readable format.</td></tr>
+    <tr><td><strong>Object (Art. 21)</strong></td><td>Object to processing based on legitimate interests (e.g. moderation logging). We will assess and respond within 30 days.</td></tr>
+    <tr><td><strong>Withdraw consent (Art. 7)</strong></td><td>Withdraw GPS consent at any time in device Settings &rarr; Privacy &rarr; Location Services. Withdraw read receipts consent at any time in Settings &rarr; Privacy &amp; Security within the app.</td></tr>
+    <tr><td><strong>Lodge a complaint</strong></td><td>You may lodge a complaint with the Cyprus Commissioner for Personal Data Protection (<a href="https://www.dataprotection.gov.cy">dataprotection.gov.cy</a>) or any EU DPA.</td></tr>
+  </tbody>
+</table>
+<a href="#top" class="back-top">&uarr; Back to top</a>
+
+<h2 id="s8">8. Data Security</h2>
+<ul>
+  <li>All data is transmitted over TLS 1.2 or higher.</li>
+  <li>Database access is protected by Row Level Security (RLS) policies &mdash; users can only read and modify their own data. Draft Listings are accessible only to the Seller who created them. Message threads are accessible only to the two participants in the conversation.</li>
+  <li>Authentication uses short-lived OTP codes and JWT session tokens; no passwords are stored.</li>
+  <li>Supabase infrastructure is hosted in Stockholm (eu-north-1), within the EU.</li>
+  <li>File storage buckets enforce per-user access controls.</li>
+  <li>No employee has direct access to production data without an auditable reason.</li>
+</ul>
+<p>Despite these measures, no system is 100% secure. If you believe your account has been compromised, contact us immediately at <a href="mailto:boogieapps.help@gmail.com">boogieapps.help@gmail.com</a>.</p>
+<a href="#top" class="back-top">&uarr; Back to top</a>
+
+<h2 id="s9">9. Children's Privacy</h2>
+<p>MUXTI is not directed at children under 16. We do not knowingly collect personal data from anyone under 16. If we discover that we have inadvertently collected data from a child under 16, we will delete it immediately. If you believe a child has created an account, please contact us.</p>
+<a href="#top" class="back-top">&uarr; Back to top</a>
+
+<h2 id="s10">10. Local Storage</h2>
+<p>The MUXTI app stores the following data locally on your device only (not transmitted to our servers):</p>
+<ul>
+  <li><strong>Recent search terms</strong> &mdash; so your search history is available offline.</li>
+  <li><strong>Filter preferences</strong> &mdash; so your last-used filters are remembered between sessions.</li>
+  <li><strong>First-listing tips flag</strong> &mdash; so we only show onboarding tips once.</li>
+</ul>
+<p>This local data does not leave your device and can be cleared by uninstalling the app. Note that Draft Listings are stored <strong>server-side</strong> (not locally), so they are accessible across all your devices and are not affected by uninstalling the app.</p>
+<a href="#top" class="back-top">&uarr; Back to top</a>
+
+<h2 id="s11">11. Changes to This Policy</h2>
+<p>We may update this policy from time to time. When we make material changes, we will notify you via a push notification or an in-app banner. The &ldquo;Effective date&rdquo; at the top of this document will always reflect the latest version. Continued use of MUXTI after a change constitutes acceptance of the updated policy.</p>
+<a href="#top" class="back-top">&uarr; Back to top</a>
+
+<h2 id="s12">12. Contact Us</h2>
+<div class="contact-box">
+  <strong>BoogieApps &mdash; Data Controller</strong><br>
+  Email: <a href="mailto:boogieapps.help@gmail.com">boogieapps.help@gmail.com</a><br>
+  Subject line: MUXTI Privacy Request<br>
+  Jurisdiction: Cyprus (European Union)<br>
+  Supervisory authority: <a href="https://www.dataprotection.gov.cy">Cyprus Commissioner for Personal Data Protection (dataprotection.gov.cy)</a>
+</div>
+<a href="#top" class="back-top">&uarr; Back to top</a>
+
+<footer>
+  This document was last reviewed on 24 June 2026 &middot; MUXTI is a product of BoogieApps, Cyprus<br>
+  boogieapps.help@gmail.com &middot; Cyprus, EU
+</footer>
+
 </body>
 </html>

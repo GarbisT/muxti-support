@@ -1,77 +1,450 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Terms of Service — MUXTI</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet"/>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: #0D1129; color: #fff; min-height: 100vh; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 80px 24px 100px; }
-    .back { display: inline-flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.5); text-decoration: none; font-size: 14px; font-weight: 500; margin-bottom: 48px; transition: color 0.2s; }
-    .back:hover { color: #fff; }
-    .logo { font-size: 18px; font-weight: 900; background: linear-gradient(135deg,#A78BFA,#60A5FA); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 8px; }
-    h1 { font-size: 36px; font-weight: 900; letter-spacing: -1px; margin-bottom: 8px; }
-    .updated { font-size: 13px; color: rgba(255,255,255,0.4); margin-bottom: 48px; }
-    h2 { font-size: 18px; font-weight: 700; margin: 36px 0 12px; color: #A78BFA; }
-    p, li { font-size: 15px; line-height: 1.75; color: rgba(255,255,255,0.7); margin-bottom: 12px; }
-    ul { padding-left: 20px; }
-    a { color: #60A5FA; }
-    hr { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 40px 0; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MUXTI — Terms and Conditions</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,sans-serif;font-size:15px;line-height:1.75;color:#1a1a2e;background:#fff;padding:20px 20px 40px;max-width:820px;margin:0 auto}
+.header{text-align:center;padding:28px 0 22px;border-bottom:2px solid #7c3aed;margin-bottom:28px}
+.logo{font-size:28px;font-weight:800;color:#7c3aed;letter-spacing:-1px;margin-bottom:6px}
+.doc-title{font-size:18px;font-weight:700;color:#1a1a2e;margin-bottom:4px}
+.meta{font-size:13px;color:#6b7280}
+.warning{background:#fdf4ff;border:1px solid #d8b4fe;border-radius:8px;padding:14px 16px;margin-bottom:20px;font-size:14px;color:#4c1d95;font-weight:500}
+.index{background:#faf7ff;border:1px solid #ddd6fe;border-radius:10px;padding:16px 18px;margin-bottom:28px}
+.index-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:#7c3aed;margin-bottom:12px}
+.index-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px 20px}
+.index-grid a{font-size:13px;color:#5b21b6;text-decoration:none;padding:4px 0;display:block;border-bottom:1px solid #ede9fe}
+.index-grid a:hover{color:#7c3aed}
+.cnum{color:#7c3aed;font-weight:700;margin-right:4px}
+h2{font-size:17px;font-weight:700;color:#4c1d95;margin:28px 0 10px;padding-bottom:6px;border-bottom:1px solid #ede9fe}
+h3{font-size:15px;font-weight:700;color:#5b21b6;margin:20px 0 8px}
+p{margin-bottom:12px}
+.highlight{background:#f5f3ff;border-left:3px solid #7c3aed;padding:12px 16px;border-radius:0 8px 8px 0;margin:16px 0;font-size:14px}
+.highlight strong{color:#4c1d95}
+.new-clause{background:#f0fdf4;border-left:3px solid #16a34a;padding:12px 16px;border-radius:0 8px 8px 0;margin:16px 0}
+.new-clause .cnum{color:#16a34a}
+.new-clause h3{color:#15803d;margin:16px 0 6px;font-size:14px}
+ol{margin:10px 0 12px 22px}
+ol li{margin-bottom:8px}
+ul{margin:10px 0 12px 22px}
+ul li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+thead th{background:#7c3aed;color:#fff;padding:9px 12px;text-align:left;font-weight:600}
+tbody td{padding:9px 12px;border-bottom:1px solid #e5e7eb;vertical-align:top}
+tbody tr:nth-child(even) td{background:#f9fafb}
+.def-term{font-weight:700;color:#4c1d95}
+.back-top{font-size:12px;color:#7c3aed;text-decoration:none;display:inline-block;margin-top:20px}
+footer{margin-top:40px;padding-top:20px;border-top:1px solid #e5e7eb;text-align:center;font-size:13px;color:#9ca3af}
+</style>
 </head>
-<body>
-<div class="wrap">
-  <a href="https://muxti.cy" class="back">← Back to MUXTI</a>
+<body id="top">
+
+<div class="header">
   <div class="logo">MUXTI</div>
-  <h1>Terms of Service</h1>
-  <p class="updated">Last updated: June 2026</p>
-
-  <h2>1. Acceptance of Terms</h2>
-  <p>By downloading, accessing, or using the MUXTI application ("App"), you agree to be bound by these Terms of Service. If you do not agree, do not use the App.</p>
-
-  <h2>2. Description of Service</h2>
-  <p>MUXTI is a peer-to-peer marketplace platform exclusively serving users in Cyprus. The App allows registered users to post, browse, and respond to listings for items for sale, trade, rent, or hire.</p>
-
-  <h2>3. User Accounts</h2>
-  <p>You must be 18 years or older to use MUXTI. You are responsible for maintaining the security of your account and all activity that occurs under it. You agree to provide accurate information when registering.</p>
-
-  <h2>4. User Listings</h2>
-  <ul>
-    <li>You are solely responsible for the content, accuracy, and legality of your listings.</li>
-    <li>Prohibited items include but are not limited to: illegal goods, counterfeit products, weapons, and controlled substances.</li>
-    <li>MUXTI reserves the right to remove any listing that violates these terms without notice.</li>
-  </ul>
-
-  <h2>5. Transactions</h2>
-  <p>MUXTI is a discovery and communication platform only. All transactions are conducted between users directly. MUXTI is not a party to any transaction and accepts no liability for the quality, safety, or legality of items listed.</p>
-
-  <h2>6. Payments and Wallet</h2>
-  <p>The MUXTI Wallet feature allows users to add credits for boosting listings. All payments are processed securely via Stripe. Credits are non-refundable once used. MUXTI reserves the right to adjust pricing at any time.</p>
-
-  <h2>7. Prohibited Conduct</h2>
-  <ul>
-    <li>Posting false, misleading, or fraudulent listings</li>
-    <li>Harassing, threatening, or abusing other users</li>
-    <li>Attempting to circumvent the platform (e.g. redirecting users to external payment methods to avoid fees)</li>
-    <li>Using automated tools to scrape or interact with the platform</li>
-  </ul>
-
-  <h2>8. Intellectual Property</h2>
-  <p>All content, branding, and technology within MUXTI is the property of its owners. You may not copy, reproduce, or distribute any part of the App without written permission.</p>
-
-  <h2>9. Limitation of Liability</h2>
-  <p>MUXTI is provided "as is" without warranties of any kind. To the fullest extent permitted by law, MUXTI shall not be liable for any indirect, incidental, or consequential damages arising from use of the App.</p>
-
-  <h2>10. Changes to Terms</h2>
-  <p>We may update these Terms at any time. Continued use of the App after changes constitutes acceptance of the new Terms.</p>
-
-  <h2>11. Contact</h2>
-  <p>For questions about these Terms, contact us at <a href="https://garbist.github.io/muxti-support">support</a> or via email at boogieapps.help@gmail.com.</p>
-
-  <hr/>
-  <p style="font-size:13px;color:rgba(255,255,255,0.3)">© 2026 MUXTI. Cyprus.</p>
+  <div class="doc-title">Terms and Conditions of Use</div>
+  <div class="meta">Effective Date: 24 June 2026 &nbsp;&middot;&nbsp; Operated by Garbis Tapacian &nbsp;&middot;&nbsp; Cyprus (EU)</div>
 </div>
+
+<div class="warning">
+  PLEASE READ THESE TERMS CAREFULLY BEFORE USING MUXTI. BY CREATING AN ACCOUNT OR USING THE PLATFORM IN ANY WAY, YOU CONFIRM THAT YOU HAVE READ, UNDERSTOOD, AND AGREE TO BE BOUND BY THESE TERMS IN THEIR ENTIRETY. IF YOU DO NOT AGREE, YOU MUST NOT USE MUXTI.
+</div>
+
+<nav class="index">
+  <div class="index-title">&#128204; Jump to section</div>
+  <div class="index-grid">
+    <a href="#s1">1. Introduction &amp; Definitions</a>
+    <a href="#s2">2. Acceptance of Terms</a>
+    <a href="#s3">3. Eligibility</a>
+    <a href="#s4">4. User Accounts</a>
+    <a href="#s5">5. Listings and Content</a>
+    <a href="#s6">6. Prohibited Items</a>
+    <a href="#s7">7. Transactions Between Users</a>
+    <a href="#s8">8. Payments &amp; MUXTI Wallet</a>
+    <a href="#s9">9. Boost &amp; Featured Programme</a>
+    <a href="#s10">10. Content Moderation</a>
+    <a href="#s11">11. User Conduct</a>
+    <a href="#s11a">11a. In-App Messaging</a>
+    <a href="#s12">12. Intellectual Property</a>
+    <a href="#s13">13. Privacy &amp; Data Protection</a>
+    <a href="#s14">14. Disclaimers</a>
+    <a href="#s15">15. Limitation of Liability</a>
+    <a href="#s16">16. Indemnification</a>
+    <a href="#s17">17. Suspension &amp; Termination</a>
+    <a href="#s18">18. Changes to These Terms</a>
+    <a href="#s19">19. Governing Law &amp; Disputes</a>
+    <a href="#s20">20. General Provisions</a>
+    <a href="#s21">21. Contact Information</a>
+  </div>
+</nav>
+
+<h2 id="s1">1. Introduction and Definitions</h2>
+<p>These Terms and Conditions (&ldquo;Terms&rdquo;) govern your access to and use of the MUXTI mobile application and any related services (collectively, the &ldquo;Platform&rdquo;), operated by Garbis Tapacian (&ldquo;Operator&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;), an individual resident of the Republic of Cyprus.</p>
+<p>MUXTI is a peer-to-peer online marketplace that enables registered users to post, browse, and respond to listings for the purchase, sale, and exchange of physical goods. The Operator provides the technical infrastructure and moderation framework for the Platform but is not a party to any transaction concluded between users.</p>
+
+<h3>1.1 Definitions</h3>
+<p>In these Terms, the following words have the meanings given below:</p>
+<ul>
+  <li><span class="def-term">&ldquo;Account&rdquo;</span> means the registered user profile created by a natural person upon completing registration on the Platform.</li>
+  <li><span class="def-term">&ldquo;Content&rdquo;</span> means any text, images, descriptions, pricing information, contact details, or other material submitted by a user through the Platform.</li>
+  <li><span class="def-term">&ldquo;Listing&rdquo;</span> means an advertisement posted by a Seller on the Platform offering goods for sale or exchange.</li>
+  <li><span class="def-term">&ldquo;Draft Listing&rdquo;</span> means a Listing that has been saved by a Seller but not yet submitted for moderation or published to the public feed.</li>
+  <li><span class="def-term">&ldquo;Bump&rdquo;</span> means a one-time free extension of a Listing&rsquo;s active period by 30 days, available to Sellers in the 24-hour window before the Listing is due to expire.</li>
+  <li><span class="def-term">&ldquo;Boost&rdquo;</span> means a paid promotional service that elevates a Listing to a higher position in feed and search results for a defined period.</li>
+  <li><span class="def-term">&ldquo;Featured&rdquo; or &ldquo;Featured Placement&rdquo;</span> means the promotional status automatically awarded to a Listing that has met the criteria of the Featured Placement Programme as described in clause 44a, entitling that Listing to a carousel slot in the Platform&rsquo;s dedicated Featured section displayed at the top of the main feed.</li>
+  <li><span class="def-term">&ldquo;Featured Carousel&rdquo;</span> means the horizontal scrollable banner displayed at the top of the main feed, showing up to ten (10) active Featured Listings at any one time.</li>
+  <li><span class="def-term">&ldquo;Featured Queue&rdquo;</span> means the first-in-first-out waiting list of Listings that have qualified for Featured Placement but for which no carousel slot is currently available.</li>
+  <li><span class="def-term">&ldquo;Wallet&rdquo; or &ldquo;MUXTI Wallet&rdquo;</span> means the prepaid credit balance held within the Platform, denominated in Euro, usable exclusively to purchase Boost services.</li>
+  <li><span class="def-term">&ldquo;Stripe&rdquo;</span> means Stripe, Inc., the third-party payment processor integrated into the Platform for processing all monetary transactions.</li>
+  <li><span class="def-term">&ldquo;Buyer&rdquo;</span> means a user who responds to or purchases goods from a Listing.</li>
+  <li><span class="def-term">&ldquo;Seller&rdquo;</span> means a user who posts a Listing on the Platform.</li>
+  <li><span class="def-term">&ldquo;Prohibited Items&rdquo;</span> means any goods, services, or content specified in Section 6 of these Terms.</li>
+  <li><span class="def-term">&ldquo;GDPR&rdquo;</span> means Regulation (EU) 2016/679 of the European Parliament and of the Council on the protection of natural persons with regard to the processing of personal data.</li>
+  <li><span class="def-term">&ldquo;Cyprus Law&rdquo;</span> means the laws of the Republic of Cyprus as applicable from time to time.</li>
+</ul>
+<a href="#top" class="back-top">&uarr; Back to top</a>
+
+<h2 id="s2">2. Acceptance of Terms</h2>
+<p>By downloading, installing, accessing, or using the MUXTI application, you acknowledge that you have read, understood, and agree to be legally bound by these Terms, together with our Privacy Policy, which is incorporated herein by reference.</p>
+<p>If you access the Platform on behalf of another person or entity, you represent and warrant that you have full authority to bind that person or entity to these Terms.</p>
+<p>Your continued use of the Platform following any amendment to these Terms shall constitute your acceptance of the revised Terms.</p>
+<a href="#top" class="back-top">&uarr; Back to top</a>
+
+<h2 id="s3">3. Eligibility</h2>
+<ol>
+  <li>You must be at least 18 years of age to create an Account or use the Platform in any capacity.</li>
+  <li>You must have the legal capacity to enter into binding contracts under applicable law.</li>
+  <li>Persons who have been suspended or permanently banned from the Platform are not eligible to register a new Account.</li>
+  <li>If you are acting as a professional seller, you are responsible for complying with all applicable consumer protection obligations imposed on traders under Cyprus Law and EU Directive 2019/771.</li>
+  <li>Use of the Platform by persons located in jurisdictions where such use is prohibited by local law is at the sole risk of the user.</li>
+</ol>
+<a href="#top" class="back-top">&uarr; Back to top</a>
+
+<h2 id="s4">4. User Accounts</h2>
+<h3>4.1 Registration</h3>
+<ol start="6">
+  <li>To access core features of the Platform, you must register an Account using a valid email address. Registration is completed via a one-time verification code. No password is created or stored.</li>
+  <li>You agree to provide accurate, current, and complete information during registration and to update such information promptly when it changes.</li>
+  <li>Each individual may register only one Account. Creating multiple Accounts to circumvent moderation decisions, avoid bans, or manipulate the Platform is strictly prohibited.</li>
+</ol>
+<h3>4.2 Account Security</h3>
+<ol start="9">
+  <li>You are solely responsible for maintaining the confidentiality and security of your Account and for all activities that occur under it.</li>
+  <li>You agree to notify us immediately at boogieapps.help@gmail.com if you suspect any unauthorised access to or use of your Account.</li>
+  <li>The Operator is not liable for any loss or damage arising from your failure to maintain the security of your Account.</li>
+</ol>
+<h3>4.3 Account Termination by User</h3>
+<ol start="12">
+  <li>You may delete your Account at any time through the Account settings menu. Upon deletion, your Content will be removed from public view.</li>
+  <li>Any Wallet balance remaining at the time of Account deletion is forfeited unless a refund has been expressly agreed in writing by the Operator.</li>
+</ol>
+<a href="#top" class="back-top">&uarr; Back to top</a>
+
+<h2 id="s5">5. Listings and Content</h2>
+<h3>5.1 Posting Listings</h3>
+<ol start="14">
+  <li>Users may post Listings for physical goods only.</li>
+  <li>Each Listing must accurately and truthfully describe the item offered, including its condition, any known defects, and its price.</li>
+  <li>Listings must include at least one clear photograph of the actual item.</li>
+  <li>You may not use the Platform to advertise items that are not in your possession or under your lawful control at the time of posting.</li>
+  <li>Sellers are solely responsible for the accuracy of Listings and for compliance with all applicable laws relating to the goods advertised.</li>
+  <li>The Operator reserves the right to remove, edit, or decline any Listing at its sole discretion, without notice and without liability.</li>
+</ol>
+
+<h3>5.2 Listing Duration, Expiry and Bump</h3>
+<ol start="20">
+  <li>Each active Listing remains publicly visible on the feed for <strong>30 days</strong> from the date it is first published or most recently reactivated. After 30 days, the Listing is automatically hidden from the public feed. The Listing remains visible to the Seller under &ldquo;My Listings&rdquo; with an &ldquo;Expired&rdquo; status and may be renewed (which resubmits it for moderation review), archived, or deleted by the Seller.</li>
+  <li>Sellers are responsible for removing or marking as sold any Listing once the corresponding item has been sold or exchanged.</li>
+</ol>
+<div class="new-clause">
+  <p><span class="cnum">20a.</span> <strong>Boost and Expiry Extension</strong> &mdash; Where a Listing has an active Boost at the time its base 30-day period would otherwise expire, the expiry window is automatically extended to 30 days after the conclusion of the Boost period. The 30-day countdown begins only once the paid Boost period has ended. This extension is applied automatically and requires no action from the Seller.</p>
+  <p><span class="cnum">20b.</span> <strong>Bump (One-Time Free Extension)</strong> &mdash; In the 24-hour window immediately before a Listing is due to expire, the Seller may use the one-time <strong>Bump</strong> option to extend the Listing&rsquo;s active period by a further 30 days from the moment the Bump is applied. Each Listing may be bumped at most <strong>once during its lifetime</strong>. The Bump option is not available to Listings that have already expired; expired Listings must be renewed through the standard reactivation process, which triggers a fresh moderation review. A Bump does not interact with or override any active Boost period.</p>
+</div>
+
+<h3>5.3 Draft Listings</h3>
+<div class="new-clause">
+  <p><span class="cnum">21a.</span> Users may save a Listing as a <strong>Draft</strong> at any stage before publication. Draft Listings are stored on the Platform&rsquo;s servers and are visible only to the Seller under &ldquo;My Listings&rdquo;. Drafts are not published to the public feed, are not subject to the 30-day expiry period, and are not processed through content moderation until the Seller chooses to publish.</p>
+  <p><span class="cnum">21b.</span> Upon the Seller choosing to publish a Draft Listing, the Listing is submitted for content moderation review in the same manner as any newly created Listing. The Listing will become publicly visible only upon receiving moderation approval.</p>
+  <p><span class="cnum">21c.</span> Draft Listings are retained on the Platform until the Seller publishes them, deletes them, or the Seller&rsquo;s Account is deleted, whichever occurs first.</p>
+  <p><span class="cnum">21d.</span> The Seller may edit a Draft Listing at any time prior to publication. Editing a Draft does not trigger moderation; only the act of publication does.</p>
+</div>
+
+<h3>5.4 Pricing and Taxes</h3>
+<ol start="22">
+  <li>All prices must be stated in Euro (EUR) and must be inclusive of any applicable taxes that the Seller is legally required to include.</li>
+  <li>Sellers who are VAT-registered are responsible for charging and accounting for VAT in accordance with applicable Cyprus and EU law.</li>
+  <li>Buyers and Sellers are individually responsible for their respective tax obligations arising from transactions conducted through the Platform.</li>
+</ol>
+<h3>5.5 Licence to Content</h3>
+<ol start="25">
+  <li>By posting Content on the Platform, you grant the Operator a non-exclusive, royalty-free, worldwide licence to use, store, display, reproduce, and distribute your Content solely for the purpose of operating and promoting the Platform.</li>
+  <li>You represent and warrant that you own or have the necessary rights to all Content you submit.</li>
+</ol>
+<a href="#top" class="back-top">&uarr; Back to top</a>
+
+<h2 id="s6">6. Prohibited Items and Content</h2>
+<p>The following categories are strictly prohibited. This list is non-exhaustive.</p>
+
+<h3>6.1 Illegal Items (Prohibited by Cyprus or EU Law)</h3>
+<ul>
+  <li>Firearms, component parts, ammunition, suppressors/silencers, and related accessories.</li>
+  <li>Swords, bladed weapons, and martial arts weapons requiring a permit under Cyprus law.</li>
+  <li>Knives and bladed articles where the sale or transfer is restricted under Cyprus law.</li>
+  <li>Narcotic drugs, psychotropic substances, and precursor chemicals.</li>
+  <li>Prescription-only medicines, controlled medications, and veterinary medicinal products for human use.</li>
+  <li>Hazardous chemicals, toxic substances, and biological agents classified as dangerous under EU CLP Regulation (EC) No 1272/2008.</li>
+  <li>Radioactive materials, nuclear materials, or equipment capable of producing ionising radiation.</li>
+  <li>Explosives, pyrotechnics, and fireworks (other than commercially packaged consumer fireworks legally available for retail sale in Cyprus).</li>
+  <li>Counterfeit, replica, or trademark-infringing goods in violation of EU Regulation 608/2013.</li>
+  <li>Stolen goods or goods obtained through any illegal means.</li>
+  <li>Child sexual abuse material (CSAM) or any content that sexually exploits or endangers minors.</li>
+  <li>Content that incites terrorism, racial or religious hatred, or violence against any person or group.</li>
+  <li>Human remains, body parts, organs, or tissue.</li>
+  <li>Items derived from CITES Appendix I or II species.</li>
+  <li>Currency counterfeits and instruments used to produce counterfeit currency.</li>
+  <li>Equipment used for illegal surveillance, including covert recording devices and IMSI catchers.</li>
+  <li>Government-issued identity documents, travel documents, passports, driver licences, and official stamps or seals.</li>
+  <li>Items exported in violation of EU export control regulations or UN sanctions.</li>
+</ul>
+
+<h3>6.2 Restricted Items (Prohibited by Platform Policy)</h3>
+<ul>
+  <li><strong>Alcohol</strong> &mdash; the sale of alcoholic beverages on MUXTI is not permitted.</li>
+  <li><strong>Tobacco products, e-cigarettes, vaping devices, and nicotine products</strong> &mdash; prohibited regardless of the user&rsquo;s age.</li>
+  <li><strong>Live animals</strong> &mdash; except as permitted in writing by the Operator for licensed breeders.</li>
+  <li><strong>Medical devices</strong> that lack the CE marking required under EU Medical Device Regulation (EU) 2017/745.</li>
+  <li><strong>Unlicensed food products</strong>, products lacking mandatory EU labelling, raw milk, or any food product prohibited for retail sale in Cyprus.</li>
+  <li><strong>Adult content</strong> &mdash; sexually explicit material or services of a sexual nature.</li>
+  <li><strong>Financial instruments</strong> &mdash; shares, bonds, derivatives, cryptocurrency, foreign currency, or investment products.</li>
+  <li><strong>Gambling services</strong>, lottery tickets, betting slips, or any gaming product regulated under Cyprus gaming law.</li>
+  <li><strong>Pyramid schemes</strong>, multi-level marketing schemes, or any scheme requiring recruitment to generate financial return.</li>
+  <li><strong>Personal data</strong>, email databases, mailing lists, or any collection of third-party personal information.</li>
+  <li><strong>Academic dishonesty services</strong> &mdash; essays, dissertations, or assignments intended to be submitted fraudulently.</li>
+  <li><strong>Hacking tools</strong>, malware, spyware, ransomware, keyloggers, or exploit code.</li>
+  <li><strong>Satellite and cable TV decoders</strong> or smart cards designed to receive encrypted broadcast signals without authorisation.</li>
+  <li><strong>Military-grade equipment</strong>, body armour, and official government or law enforcement uniforms without written authorisation.</li>
+  <li><strong>Discriminatory content</strong> &mdash; items that demean or promote discrimination on the basis of any protected characteristic.</li>
+  <li><strong>Spam services</strong>, bulk messaging systems, or tools to facilitate unsolicited commercial communications.</li>
+  <li><strong>Recalled or banned consumer products</strong> formally withdrawn from the market by a competent authority.</li>
+  <li><strong>Counterfeit certificates</strong> of conformity, quality marks, or testing reports.</li>
+</ul>
+
+<h3>6.3 Consequences of Prohibited Listings</h3>
+<p>Any Listing that falls within a prohibited category will be removed without notice. Repeated violations, or a single serious violation, may result in immediate and permanent suspension of the offending Account. The Operator reserves the right to report illegal activity to the Cyprus Police or other competent authorities.</p>
+<a href="#top" class="back-top">&uarr; Back to top</a>
+
+<h2 id="s7">7. Transactions Between Users</h2>
+<p>MUXTI is a venue. The Operator is not a party to any transaction concluded between a Buyer and a Seller.</p>
+<ol start="27">
+  <li>All negotiations, agreements, payment for goods, and delivery or collection arrangements are conducted directly between the Buyer and the Seller.</li>
+  <li>The Operator does not inspect, authenticate, verify, or guarantee the condition, quality, safety, legality, or accuracy of any goods listed on the Platform.</li>
+  <li>The Platform does not operate an escrow service, payment protection scheme, or buyer protection programme for user-to-user transactions.</li>
+  <li>Where a dispute arises between a Buyer and a Seller, the Operator may, at its absolute discretion, provide limited assistance in facilitating communication, but is under no obligation to do so.</li>
+  <li>The Operator strongly recommends that: (a) Buyers inspect goods in person before making any payment; (b) transactions be concluded in a public place; (c) users do not pay in advance for high-value items before inspecting them; and (d) users exercise caution with any offer that appears too good to be true.</li>
+  <li>The legal obligation to remedy non-conforming goods rests with the Seller, not with the Operator, pursuant to Law 133(I)/2021 implementing Directive (EU) 2019/771.</li>
+  <li>Users who have been the victim of fraud should report this to the Cyprus Police immediately. The Operator will cooperate with competent authorities in any lawful investigation.</li>
+</ol>
+<a href="#top" class="back-top">&uarr; Back to top</a>
+
+<h2 id="s8">8. Payments and MUXTI Wallet</h2>
+<h3>8.1 Payment Processing</h3>
+<ol start="34">
+  <li>All monetary transactions on the Platform are processed by Stripe, Inc. By making a payment through the Platform, you also agree to Stripe&rsquo;s Terms of Service and Privacy Policy.</li>
+  <li>The Operator does not store your card number, bank account details, or other sensitive payment credentials. All such data is handled exclusively by Stripe in accordance with PCI DSS standards.</li>
+  <li>Payments are denominated in Euro (EUR).</li>
+</ol>
+<h3>8.2 MUXTI Wallet</h3>
+<ol start="37">
+  <li>The MUXTI Wallet is a prepaid credit balance that may be used exclusively to purchase Boost services within the Platform. Wallet credits have no monetary value outside the Platform and cannot be transferred to another user, withdrawn as cash, or used to pay for goods in user-to-user transactions.</li>
+  <li>Wallet credits are added by topping up your balance using a supported payment method through the Stripe checkout interface.</li>
+  <li>Wallet credits do not expire whilst your Account remains active.</li>
+  <li>Wallet credits are non-refundable, except where: (a) a technical error attributable to the Platform results in an incorrect deduction; or (b) a refund is expressly required under applicable consumer law.</li>
+  <li>Upon Account deletion, any remaining Wallet balance is forfeited, unless a refund is expressly agreed in writing by the Operator prior to deletion.</li>
+</ol>
+<a href="#top" class="back-top">&uarr; Back to top</a>
+
+<h2 id="s9">9. Boost Service and Featured Placement Programme</h2>
+<ol start="42">
+  <li>The Boost service is an optional paid promotion that positions a Listing at or near the top of the Platform&rsquo;s feed and search results for the duration of the selected Boost plan.</li>
+  <li>Boost plans are offered for defined durations (e.g., 3 days, 7 days, 14 days) at the prices displayed in the application at the time of purchase. Prices are inclusive of any applicable VAT.</li>
+  <li>A Boost activates immediately upon successful payment confirmation. The Operator does not guarantee a specific ranking position, as results may vary based on the number of competing Boosted Listings at any given time.</li>
+  <li>When a Boost is applied to a Listing, the Listing&rsquo;s 30-day expiry window (as described in clause 20) is automatically extended to 30 days after the end of the Boost period, ensuring the base listing countdown begins only once the paid promotion has concluded. This extension is applied automatically and does not require any action by the Seller.</li>
+</ol>
+
+<div class="new-clause">
+  <p><span class="cnum">44a.</span> <strong>Featured Placement Programme</strong></p>
+
+  <h3>44a.1 &mdash; How a Listing Earns Featured Status</h3>
+  <p>The Platform operates an automated Featured Placement Programme that recognises Sellers who make repeated use of the Boost service. Each completed Boost event accrues points to the relevant Listing according to the selected plan:</p>
+  <ul>
+    <li><strong>Quick Boost (3 Days)</strong> = 2 points</li>
+    <li><strong>Smart Boost (7 Days)</strong> = 3 points</li>
+    <li><strong>Max Boost (14 Days)</strong> = 6 points</li>
+  </ul>
+  <p>A Listing automatically qualifies for Featured status when it has accumulated a minimum of <strong>6 cumulative Boost points</strong> and has completed at least <strong>2 separate Boost events</strong>. Points are tied to the individual Listing and do not expire while the Listing remains active on the Platform. No manual claim or additional payment is required to enter the programme.</p>
+
+  <h3>44a.2 &mdash; The Featured Carousel (Display)</h3>
+  <p>Active Featured Listings are displayed in the <strong>Featured Carousel</strong> &mdash; a horizontally scrollable banner positioned at the very top of the main feed, ensuring maximum visibility to every user who opens the Platform. The Featured Carousel is subject to a hard cap of <strong>ten (10) active listings</strong> at any one time. This cap applies platform-wide, regardless of the total number of qualifying Listings at any given moment.</p>
+
+  <h3>44a.3 &mdash; The Featured Queue (Waiting List)</h3>
+  <p>When a Listing crosses the qualification threshold and all ten carousel slots are already occupied, the Listing is automatically placed in the <strong>Featured Queue</strong> &mdash; a first-in-first-out (FIFO) waiting list ordered by the date and time the Listing qualified. Queue position is permanent once earned: the Listing will not lose its place in the queue simply because a Boost period expires after qualification. The Platform automatically promotes the next eligible Listing from the queue into an open carousel slot approximately every 15 minutes. Sellers can view their current queue position and estimated slot status within the Listing detail screen inside the application.</p>
+
+  <h3>44a.4 &mdash; Carousel Slot Duration and Cooldown</h3>
+  <p>Once a Listing is promoted from the queue into an active carousel slot, it will be displayed in the Featured Carousel for a period of <strong>seven (7) consecutive days</strong>, after which the slot expires and the next qualifying Listing in the queue is promoted. Following the expiry of a carousel slot, a <strong>30-day cooldown period</strong> applies to that Listing before it may re-qualify for a further Featured slot. The cooldown period begins automatically upon slot expiry and requires no action on the part of the Seller.</p>
+
+  <h3>44a.5 &mdash; Queue Integrity and Slot Eligibility</h3>
+  <p>A Listing will be skipped (but not removed from the queue) when a carousel slot becomes available if, at the moment of promotion, the Listing: (a) has been marked as sold or inactive by the Seller; (b) has expired in accordance with clause 20; (c) has been flagged or suspended pending moderation review; or (d) otherwise fails to meet the Platform&rsquo;s current eligibility criteria. The Listing will retain its queue position and will be considered again when the next slot becomes available and the relevant condition has been resolved. A Listing that is permanently removed from the Platform (e.g., due to a Terms violation) will also be permanently removed from the queue.</p>
+
+  <h3>44a.6 &mdash; Modification Rights</h3>
+  <p>The Operator reserves the right to modify the point values, qualification thresholds, carousel cap, slot duration, cooldown period, and any other criteria applicable to the Featured Placement Programme at any time with reasonable prior notice communicated through the application. Modifications will not retroactively affect Listings that are already active in the carousel at the time the change takes effect.</p>
+</div>
+
+<ol start="45">
+  <li>The Boost service is a digital service that is delivered and consumed immediately upon activation. Accordingly, Boost payments are non-refundable once a Boost has been activated, except as provided in clause 46.</li>
+  <li><strong>Refund exception &mdash; Moderation removal:</strong> If a Boosted Listing is rejected or removed by the Operator&rsquo;s moderation team during the active Boost period, the Seller is entitled to a pro-rata refund of the unused Boost duration. Refund requests must be submitted to boogieapps.help@gmail.com within 14 days of the Listing&rsquo;s removal. Approved refunds will be credited to the user&rsquo;s MUXTI Wallet within 7 business days.</li>
+  <li>A refund under clause 46 will not be issued where the Listing was removed because it: (a) contained Prohibited Items as defined in Section 6; (b) was found to be fraudulent, misleading, or in material breach of these Terms; or (c) was removed at the Seller&rsquo;s own request.</li>
+  <li>The Operator reserves the right to modify Boost pricing, plan durations, and features at any time with reasonable prior notice communicated through the application.</li>
+</ol>
+<a href="#top" class="back-top">&uarr; Back to top</a>
+
+<h2 id="s10">10. Content Moderation</h2>
+<ol start="49">
+  <li>The Operator employs automated keyword filtering and human moderation to monitor Listings and user Content for compliance with these Terms.</li>
+  <li>Listings may be held for review, edited, or removed at the Operator&rsquo;s discretion. Where a Listing is removed due to a suspected violation, the Seller will be notified through the application or by email where practicable.</li>
+  <li>Users may report Listings or other Content that they believe to be in violation of these Terms.</li>
+  <li>The Operator is not obligated to pre-screen Content before it is published. However, the Operator reserves the right to review any Content at any time and to take any action it deems appropriate.</li>
+  <li>The Platform&rsquo;s content moderation activities are conducted on a reasonable-efforts basis and do not constitute a representation or warranty that the Platform is free from non-compliant, illegal, or harmful Content.</li>
+  <li>Where content is identified as potentially involving criminal conduct, the Operator will cooperate with competent Cyprus law enforcement authorities as required by law.</li>
+</ol>
+<a href="#top" class="back-top">&uarr; Back to top</a>
+
+<h2 id="s11">11. User Conduct</h2>
+<p>You agree that you will not, through your use of the Platform:</p>
+<ul>
+  <li>Post false, misleading, or deceptive Listings or Content.</li>
+  <li>Impersonate any person or entity, or misrepresent your affiliation with any person or entity.</li>
+  <li>Harvest, scrape, or systematically collect user data or other information from the Platform without the Operator&rsquo;s prior written consent.</li>
+  <li>Use automated bots, crawlers, or scripts to interact with the Platform.</li>
+  <li>Attempt to gain unauthorised access to any part of the Platform or any other user&rsquo;s Account.</li>
+  <li>Interfere with or disrupt the integrity or performance of the Platform.</li>
+  <li>Engage in any conduct that harasses, abuses, stalks, threatens, or intimidates any other user.</li>
+  <li>Use the Platform&rsquo;s messaging system to send spam, chain messages, phishing attempts, or unsolicited commercial communications.</li>
+  <li>Coordinate with other users to artificially manipulate search rankings, ratings, or any other feature of the Platform.</li>
+  <li>Circumvent or attempt to circumvent any technical or operational restriction imposed by the Operator.</li>
+  <li>Reproduce, duplicate, copy, sell, or exploit any portion of the Platform without the Operator&rsquo;s express written permission.</li>
+  <li>Use the Platform for any purpose that is unlawful under Cyprus, EU, or international law.</li>
+</ul>
+<a href="#top" class="back-top">&uarr; Back to top</a>
+
+<h2 id="s11a">11a. In-App Messaging</h2>
+<p>The Platform provides an in-app messaging feature that allows registered users to communicate directly in connection with specific listings. The following rules apply to your use of this feature:</p>
+<ul>
+  <li>Messaging on the Platform is provided solely to facilitate communication between buyers and sellers in connection with listed items. You may not use it for any unrelated commercial solicitation or off-Platform activity.</li>
+  <li>You must not use the messaging system to: (a) send unsolicited commercial messages, spam, or chain messages; (b) conduct any form of phishing, social engineering, or fraud attempt; (c) harass, threaten, or intimidate any other user; (d) share contact details for purposes other than completing a legitimate transaction relating to a specific listing; or (e) solicit transactions that circumvent the Platform&rsquo;s rules or Boost policies.</li>
+  <li><strong>Read Receipts:</strong> The Platform includes a read receipt feature that signals to the sender when their message has been opened by the recipient. This feature is enabled by default. Either party may opt out at any time in Settings &rarr; Privacy &amp; Security. When either party in a conversation has opted out, no read confirmation will be shown to either party for that conversation. The opt-out preference is stored server-side and applies immediately.</li>
+  <li><strong>Typing Indicators:</strong> When you are composing a message, a real-time typing indicator is broadcast to the other participant in the conversation. This signal is ephemeral &mdash; it is never stored on our servers &mdash; and is automatically cleared when you stop typing. Typing indicators operate as part of the messaging feature and cannot be disabled independently.</li>
+  <li>The Operator does not routinely monitor or read the content of private messages. However, users may report messages they believe to be abusive or in breach of these Terms by contacting boogieapps.help@gmail.com. The Operator reserves the right to review flagged messages and take appropriate action, including Account suspension or termination.</li>
+  <li>Message content is stored on the Platform&rsquo;s servers for as long as the conversation thread exists. Full details of how messaging data is handled, retained, and deleted are set out in the Privacy Policy.</li>
+</ul>
+<a href="#top" class="back-top">&uarr; Back to top</a>
+
+<h2 id="s12">12. Intellectual Property</h2>
+<ol start="55">
+  <li>The MUXTI name, logo, application design, interface, software, and all associated intellectual property rights are the exclusive property of the Operator or licensed to the Operator by third parties.</li>
+  <li>You retain ownership of Content you submit to the Platform, subject to the licence granted in clause 25.</li>
+  <li>If you believe that your intellectual property rights have been infringed by Content on the Platform, please contact the Operator at boogieapps.help@gmail.com.</li>
+</ol>
+<a href="#top" class="back-top">&uarr; Back to top</a>
+
+<h2 id="s13">13. Privacy and Data Protection</h2>
+<ol start="58">
+  <li>The Operator processes personal data in accordance with the GDPR (Regulation (EU) 2016/679) and the provisions of Cyprus Law 125(I)/2018.</li>
+  <li>Full details of how the Operator collects, uses, stores, and protects your personal data are set out in the Privacy Policy, which is incorporated into these Terms by reference and available within the application.</li>
+  <li>Your rights under the GDPR include the right to access, rectify, erase, restrict, or object to the processing of your personal data, and the right to data portability. Requests should be submitted to boogieapps.help@gmail.com.</li>
+  <li>If you have a complaint about the Operator&rsquo;s processing of your personal data that has not been satisfactorily resolved, you have the right to lodge a complaint with the Commissioner for Personal Data Protection of the Republic of Cyprus.</li>
+  <li>Where you make your contact details visible in a Listing, you expressly consent to other users contacting you in connection with that Listing.</li>
+</ol>
+<a href="#top" class="back-top">&uarr; Back to top</a>
+
+<h2 id="s14">14. Disclaimers</h2>
+<ol start="63">
+  <li>THE PLATFORM IS PROVIDED ON AN &ldquo;AS IS&rdquo; AND &ldquo;AS AVAILABLE&rdquo; BASIS WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY.</li>
+  <li>The Operator does not warrant that: (a) the Platform will be available at all times; (b) any Listing is accurate, complete, or lawful; (c) the Platform is free of viruses or malicious code; or (d) any defects will be corrected.</li>
+  <li>The Operator does not endorse any user, Listing, or item advertised on the Platform.</li>
+  <li>Market value and pricing guidance, if provided by the Platform, is for informational purposes only.</li>
+</ol>
+<a href="#top" class="back-top">&uarr; Back to top</a>
+
+<h2 id="s15">15. Limitation of Liability</h2>
+<ol start="67">
+  <li>To the fullest extent permitted by applicable Cyprus and EU law, the Operator shall not be liable for: (a) any indirect, incidental, special, consequential, or punitive damages; (b) loss of profits, revenue, data, goodwill, or business opportunities; (c) any damages arising from your reliance on Content posted by other users; or (d) any damages arising from transactions conducted between users.</li>
+  <li>The Operator&rsquo;s aggregate liability to you for all claims shall not exceed the greater of: (a) the total amount paid by you to the Operator in the twelve (12) months preceding the claim; or (b) EUR 100.</li>
+  <li>Nothing in these Terms excludes or limits liability that cannot be excluded or limited under applicable law, including liability for death or personal injury caused by negligence or fraud.</li>
+  <li>These limitations reflect a fair allocation of risk between the parties given that the Platform is provided as a venue for peer-to-peer transactions at no charge to users (other than optional paid services such as Boost).</li>
+</ol>
+<a href="#top" class="back-top">&uarr; Back to top</a>
+
+<h2 id="s16">16. Indemnification</h2>
+<p>You agree to indemnify, defend, and hold harmless the Operator from and against any claims, liabilities, damages, losses, costs, and expenses arising out of or related to: your breach of these Terms; your violation of any applicable law or third-party right; any Content you submit; any transaction you conduct through the Platform; or any dispute between you and another user.</p>
+<a href="#top" class="back-top">&uarr; Back to top</a>
+
+<h2 id="s17">17. Suspension and Termination</h2>
+<h3>17.1 Termination by the Operator</h3>
+<ol start="71">
+  <li>The Operator may, at its sole discretion, suspend, restrict, or permanently terminate your Account at any time and without prior notice where: (a) you have violated these Terms; (b) the Operator reasonably suspects fraudulent, abusive, or illegal activity; (c) your Account has been inactive for an extended period; (d) the Operator is required to do so by applicable law or a court order; or (e) the Operator ceases to operate the Platform.</li>
+  <li>Where reasonably practicable and not prohibited by law, the Operator will notify you of a suspension or termination and the reasons therefor.</li>
+  <li>Upon termination of your Account, your right to use the Platform ceases immediately.</li>
+</ol>
+<h3>17.2 Effect of Termination</h3>
+<ol start="74">
+  <li>Upon Account termination: (a) all Listings associated with the Account will be removed, including any Draft Listings; (b) any unused Wallet balance will be forfeited; and (c) active Boost periods are not refundable where the termination was caused by a user&rsquo;s breach of these Terms.</li>
+</ol>
+<a href="#top" class="back-top">&uarr; Back to top</a>
+
+<h2 id="s18">18. Changes to These Terms</h2>
+<ol start="75">
+  <li>The Operator reserves the right to amend these Terms at any time. Material changes will be communicated to registered users via in-app notification or email at least 14 days before the changes take effect.</li>
+  <li>If you do not agree with a proposed change, you must stop using the Platform before the change takes effect.</li>
+  <li>The Operator will maintain a record of previous versions of these Terms, which are available upon request.</li>
+</ol>
+<a href="#top" class="back-top">&uarr; Back to top</a>
+
+<h2 id="s19">19. Governing Law and Dispute Resolution</h2>
+<ol start="78">
+  <li>These Terms shall be governed by and construed in accordance with the laws of the Republic of Cyprus.</li>
+  <li>Any dispute arising out of or relating to these Terms shall be subject to the exclusive jurisdiction of the courts of the Republic of Cyprus.</li>
+  <li>Before initiating any formal legal proceedings, the parties agree to attempt to resolve any dispute in good faith through direct communication. Complaints should be directed to boogieapps.help@gmail.com. The Operator undertakes to respond to complaints within 15 business days.</li>
+  <li>Consumers resident in the European Union have the right to use the EU Online Dispute Resolution platform at https://ec.europa.eu/consumers/odr/.</li>
+  <li>Nothing in this Section prevents either party from seeking urgent interlocutory relief from a court of competent jurisdiction.</li>
+</ol>
+<a href="#top" class="back-top">&uarr; Back to top</a>
+
+<h2 id="s20">20. General Provisions</h2>
+<ol start="83">
+  <li><strong>Entire Agreement:</strong> These Terms, together with the Privacy Policy, constitute the entire agreement between you and the Operator regarding your use of the Platform.</li>
+  <li><strong>Severability:</strong> If any provision of these Terms is held to be unlawful, invalid, or unenforceable, that provision will be severed from the remainder of the Terms, which will continue in full force and effect.</li>
+  <li><strong>No Waiver:</strong> The Operator&rsquo;s failure to enforce any right or provision shall not constitute a waiver of that right or provision.</li>
+  <li><strong>Assignment:</strong> You may not assign or transfer your rights or obligations under these Terms without the Operator&rsquo;s prior written consent.</li>
+  <li><strong>Force Majeure:</strong> The Operator shall not be liable for any delay or failure in performance resulting from causes beyond its reasonable control.</li>
+  <li><strong>Language:</strong> These Terms are written in English. In the event of any conflict between an English version and a translation, the English version shall prevail.</li>
+  <li><strong>Electronic Agreement:</strong> These Terms are concluded electronically and constitute a valid and binding agreement under the Cyprus Electronic Commerce Law (Law 156(I)/2004) and EU Directive 2000/31/EC.</li>
+</ol>
+<a href="#top" class="back-top">&uarr; Back to top</a>
+
+<h2 id="s21">21. Contact Information</h2>
+<div class="highlight">
+  <strong>MUXTI is operated by:</strong><br>
+  Garbis Tapacian &mdash; Individual Operator, Republic of Cyprus<br>
+  Email: <a href="mailto:boogieapps.help@gmail.com">boogieapps.help@gmail.com</a><br><br>
+  For legal matters, data protection requests, refund claims, content moderation appeals, and general support, please contact the above email address. The Operator will endeavour to respond to all queries within 15 business days.
+</div>
+<a href="#top" class="back-top">&uarr; Back to top</a>
+
+<footer>
+  &copy; 2026 Garbis Tapacian &middot; MUXTI Terms and Conditions v1.4 &middot; Effective 24 June 2026
+</footer>
+
 </body>
 </html>
